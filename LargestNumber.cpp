@@ -1,12 +1,5 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-#include <math.h>
-using namespace std;
-
-string Solve(const vector<int> &A)
-{
+string Solution::largestNumber(const vector<int> &A) {
+    
     int  i = 0;
     vector<int> temp(A.size());
     for( i = 0; i < A.size(); i++)
@@ -19,9 +12,25 @@ string Solve(const vector<int> &A)
             string is = std::to_string(i);
 
                 string js = std::to_string(j);
+                int sis = is.size();
+                int sij = js. size();
+                long long value1 = i;
+                long long value2 = j;
+                while( sij != 0)
+                {
+                    value1 *= 10;
+                    sij--;
+                    
+                }
+                while( sis != 0)
+                {
+                    value2 *= 10;
+                    sis--;
+                    
+                }
 
-                int value1 =  i * pow(10, js.size() ) + j;
-                int value2 =  j* pow(10, is.size()) + i;
+                value1 += j;
+                value2 += i;
 
                 return value1> value2 ? true : false;
          });
@@ -41,13 +50,4 @@ string Solve(const vector<int> &A)
     }
     }
     return s;
-}
-int main()
-{
-   vector<int> numbers(10);
-   for ( int i = 0; i < 10; i++)
-   {
-       cin>>numbers[i];
-   }
-   cout<<Solve(numbers);
 }
