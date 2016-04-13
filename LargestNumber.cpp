@@ -1,11 +1,7 @@
 string Solution::largestNumber(const vector<int> &A) {
     
     int  i = 0;
-    vector<int> temp(A.size());
-    for( i = 0; i < A.size(); i++)
-    {
-        temp[i] = A[i];
-    }
+    vector<int> temp(A.begin(), A.end());
 
     sort(temp.begin(), temp.end(), [](int i, int j)
          {
@@ -32,12 +28,12 @@ string Solution::largestNumber(const vector<int> &A) {
                 value1 += j;
                 value2 += i;
 
-                return value1> value2 ? true : false;
+                return value1> value2;
          });
     string s;
     for ( auto iter  = temp.begin(); iter != temp.end(); iter++)
     {
-        if ( *iter == 0)
+        if ( *temp.begin() == 0)
         {
         string st = std::to_string(*iter);
         s.append(st);
