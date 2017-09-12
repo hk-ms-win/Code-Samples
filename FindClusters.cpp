@@ -1,5 +1,14 @@
+
 // FindClusters.cpp : Defines the entry point for the console application.
 //
+
+/*
+ Find the clusters in a 2D matrix of size mxn  containing 1's and 0's and 
+return the size of the cluster that  is the biggest
+
+0's can be considered as water and 1's as land
+So a  cluster is  all portions of land that are connected
+*/
 
 #include "stdafx.h"
 #include<iostream>
