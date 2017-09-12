@@ -2,7 +2,8 @@
 // FindClusters.cpp : Defines the entry point for the console application.
 //
 
-/*
+/*  
+ Problem Statement:
  Find the clusters in a 2D matrix of size mxn  containing 1's and 0's and 
 return the size of the cluster that  is the biggest
 
